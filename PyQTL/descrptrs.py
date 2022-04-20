@@ -1,5 +1,10 @@
 import logging
-logger = logging.getLogger('server_dist')
+import sys
+
+if sys.argv[0].find('client_dist') == -1:
+    logger = logging.getLogger('server_dist')
+else:
+    logger = logging.getLogger('client_dist')
 
 
 class Port:
