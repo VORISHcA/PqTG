@@ -4,14 +4,14 @@ import datetime
 
 
 class ServerStorage:
-    '''
+    """
     Класс - оболочка для работы с базой данных сервера.
     Использует SQLite базу данных, реализован с помощью
     SQLAlchemy ORM и используется классический подход.
-    '''
+    """
 
     class AllUsers:
-        '''Класс - отображение таблицы всех пользователей.'''
+        """Класс - отображение таблицы всех пользователей."""
 
         def __init__(self, username, passwd_hash):
             self.name = username
@@ -21,7 +21,7 @@ class ServerStorage:
             self.id = None
 
     class ActiveUsers:
-        '''Класс - отображение таблицы активных пользователей.'''
+        """Класс - отображение таблицы активных пользователей."""
 
         def __init__(self, user_id, ip_address, port, login_time):
             self.user = user_id
@@ -41,7 +41,7 @@ class ServerStorage:
             self.port = port
 
     class UsersContacts:
-        '''Класс - отображение таблицы контактов пользователей.'''
+        """Класс - отображение таблицы контактов пользователей."""
 
         def __init__(self, user, contact):
             self.id = None
@@ -208,8 +208,10 @@ class ServerStorage:
             return False
 
     def user_logout(self, username):
-        """Метод фиксирующий отключения пользователя."""
-        # Запрашиваем пользователя, что покидает нас
+        """
+        Метод фиксирующий отключения пользователя.
+        Запрашиваем пользователя, что покидает нас
+        """
         user = self.session.query(
             self.AllUsers).filter_by(
             name=username).first()
@@ -221,8 +223,10 @@ class ServerStorage:
         self.session.commit()
 
     def process_message(self, sender, recipient):
-        """Метод записывающий в таблицу статистики факт передачи сообщения."""
-        # Получаем ID отправителя и получателя
+        """
+        Метод записывающий в таблицу статистики факт передачи сообщения.
+        Получаем ID отправителя и получателя
+        """
         sender = self.session.query(
             self.AllUsers).filter_by(
             name=sender).first().id

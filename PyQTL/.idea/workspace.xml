@@ -30,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doc/build/html/_static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -39,8 +39,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL" />
+      <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL\doc\build\html\_static" />
       <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL\common" />
+      <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL\doc\source" />
+      <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\voris_6holof2\PycharmProjects\PqTG\PyQTL\common" />
@@ -215,7 +217,9 @@
       <workItem from="1650818140603" duration="5338000" />
       <workItem from="1651049780164" duration="1014000" />
       <workItem from="1651930802546" duration="4439000" />
-      <workItem from="1652358703085" duration="1659000" />
+      <workItem from="1652358703085" duration="2477000" />
+      <workItem from="1652444900785" duration="1120000" />
+      <workItem from="1652529265913" duration="6344000" />
     </task>
     <servers />
   </component>

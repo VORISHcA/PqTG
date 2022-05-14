@@ -137,7 +137,8 @@ class ServerStorage:
             self.session.add(user)
             self.session.commit()
 
-        new_active_user = self.ActiveUsers(user.id, ip_address, port, datetime.datetime.now())
+        new_active_user = self.ActiveUsers(user.id, ip_address, port,
+                                           datetime.datetime.now())
         self.session.add(new_active_user)
 
         # Создаём экземпляр класса self.LoginHistory, через который передаём данные в таблицу

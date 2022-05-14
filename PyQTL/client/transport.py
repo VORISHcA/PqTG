@@ -159,7 +159,8 @@ class ClientTransport(threading.Thread, QObject):
 
         # Если это сообщение от пользователя добавляем в базу, даём сигнал о
         # новом сообщении
-        elif ACTION in message and message[ACTION] == MESSAGE and SENDER in message and DESTINATION in message \
+        elif ACTION in message and message[ACTION] == MESSAGE and \
+                SENDER in message and DESTINATION in message \
                 and MESSAGE_TEXT in message and message[DESTINATION] == self.username:
             logger.debug(
                 f'Получено сообщение от пользователя {message[SENDER]}:{message[MESSAGE_TEXT]}')
@@ -294,7 +295,8 @@ class ClientTransport(threading.Thread, QObject):
                         self.running = False
                         self.connection_lost.emit()
                 # Проблемы с соединением
-                except (ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError, TypeError):
+                except (ConnectionError, ConnectionAbortedError, ConnectionResetError,
+                        json.JSONDecodeError, TypeError):
                     logger.debug(f'Потеряно соединение с сервером.')
                     self.running = False
                     self.connection_lost.emit()

@@ -338,7 +338,8 @@ class ClientMainWindow(QMainWindow):
                 if self.messages.question(
                     self,
                     'Новое сообщение',
-                    f'Получено новое сообщение от {sender}.\n Данного пользователя нет в вашем контакт-листе.\n Добавить в контакты и открыть чат с ним?',
+                    f'Получено новое сообщение от {sender}.\n Данного пользователя нет в '
+                    f'вашем контакт-листе.\n Добавить в контакты и открыть чат с ним?',
                     QMessageBox.Yes,
                         QMessageBox.No) == QMessageBox.Yes:
                     self.add_contact(sender)

@@ -134,7 +134,8 @@ class ClientDatabase:
             query = query.filter_by(from_user=from_who)
         if to_who:
             query = query.filter_by(to_user=to_who)
-        return [(history_row.from_user, history_row.to_user, history_row.message, history_row.date)
+        return [(history_row.from_user, history_row.to_user,
+                 history_row.message, history_row.date)
                 for history_row in query.all()]
 
 
@@ -146,9 +147,11 @@ if __name__ == '__main__':
     test_db.add_contact('test4')
     test_db.add_users(['test1', 'test2', 'test3', 'test4', 'test5'])
     test_db.save_message('test1', 'test2',
-                         f'Привет! я тестовое сообщение от {datetime.datetime.now()}!')
+                         f'Привет! я тестовое сообщение от '
+                         f'{datetime.datetime.now()}!')
     test_db.save_message('test2', 'test1',
-                         f'Привет! я другое тестовое сообщение от {datetime.datetime.now()}!')
+                         f'Привет! я другое тестовое сообщение от '
+                         f'{datetime.datetime.now()}!')
     print(test_db.get_contacts())
     print(test_db.get_users())
     print(test_db.check_user('test1'))

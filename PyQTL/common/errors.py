@@ -12,7 +12,6 @@ class ServerError(Exception):
         return self.text
 
 
-'''
 # Исключение  - некорректные данные получены от сокета
 class IncorrectDataRecivedError(Exception):
     def __str__(self):
@@ -28,7 +27,7 @@ class ServerError(Exception):
         return self.text
 
 
-# исключение - аргумент функции не словарь.
+
 class NonDictInputError(Exception):
     def __str__(self):
         return 'Аргумент функции должен быть словарём.'
@@ -41,6 +40,6 @@ class ReqFieldMissingError(Exception):
 
     def __str__(self):
         return f'В принятом словаре отсутствует обязательное поле {self.missing_field}.'
-'''
+
 
 

@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+
 class Ui_MainClientWindow(object):
     def setupUi(self, MainClientWindow):
         MainClientWindow.setObjectName("MainClientWindow")
@@ -61,7 +62,6 @@ class Ui_MainClientWindow(object):
         self.menu_2.addSeparator()
         self.menubar.addAction(self.menu.menuAction())
         self.menubar.addAction(self.menu_2.menuAction())
-
         self.retranslateUi(MainClientWindow)
         self.btn_clear.clicked.connect(self.text_message.clear)
         QtCore.QMetaObject.connectSlotsByName(MainClientWindow)

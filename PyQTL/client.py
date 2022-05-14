@@ -1,3 +1,4 @@
+import os
 import argparse
 from common.utils import *
 from common.decos import log
@@ -13,6 +14,7 @@ from client.start_dialog import UserNameDialog
 
 # Инициализация клиентского логера
 logger = logging.getLogger('client_dist')
+
 
 @log
 def arg_parser():
@@ -31,7 +33,6 @@ def arg_parser():
         exit(1)
 
     return server_address, server_port, client_name, client_passwd
-
 
 
 '''
@@ -465,8 +466,8 @@ if __name__ == '__main__':
 
     # Записываем логи
     logger.info(
-        f'Запущен клиент с параметрами: адрес сервера: {server_address} , порт: {server_port},'
-        f' имя пользователя: {client_name}')
+        f'Запущен клиент с параметрами: адрес сервера: {server_address} , '
+        f'порт: {server_port}, имя пользователя: {client_name}')
 
     # Загружаем ключи с файла, если же файла нет, то генерируем новую пару.
     dir_path = os.path.dirname(os.path.realpath(__file__))

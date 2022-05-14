@@ -12,3 +12,11 @@ PyQTL/client/client_test2.db3
 PyQTL/unit_tests/test_client.py
 
 PyQTL/unit_tests/test_utils.py
+
+PyQTL/doc/build/html/_sources/unit_tests.rst.txt
+
+PyQTL/doc/build/html/_sources/server_gui.rst.txt
+
+PyQTL/doc/source/server_gui.rst
+
+PyQTL/doc/source/unit_tests.rst

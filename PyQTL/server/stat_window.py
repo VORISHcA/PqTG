@@ -36,10 +36,9 @@ class StatWindow(QDialog):
         '''Метод реализующий заполнение таблицы статистикой сообщений.'''
         # Список записей из базы
         stat_list = self.database.message_history()
-
         # Объект модели данных:
-        list = QStandardItemModel()
-        list.setHorizontalHeaderLabels(
+        list_clients = QStandardItemModel()
+        list_clients.setHorizontalHeaderLabels(
             ['Имя Клиента', 'Последний раз входил', 'Сообщений отправлено', 'Сообщений получено'])
         for row in stat_list:
             user, last_seen, sent, recvd = row
@@ -51,7 +50,7 @@ class StatWindow(QDialog):
             sent.setEditable(False)
             recvd = QStandardItem(str(recvd))
             recvd.setEditable(False)
-            list.appendRow([user, last_seen, sent, recvd])
-        self.stat_table.setModel(list)
+            list_clients.appendRow([user, last_seen, sent, recvd])
+        self.stat_table.setModel(list_clients)
         self.stat_table.resizeColumnsToContents()
         self.stat_table.resizeRowsToContents()
